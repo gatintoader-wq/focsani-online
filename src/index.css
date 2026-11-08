@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-neutral-100 font-sans text-neutral-900 antialiased;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .focsani-pin span {
+    @apply block h-6 w-6 rounded-full rounded-bl-none border-[3px] border-white shadow-lg shadow-primary-900/30;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    margin: 2px;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-primary-800 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-primary-800/20 transition duration-200 hover:bg-primary-700 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-accent-500 px-5 py-3 text-sm font-bold text-primary-800 shadow-md shadow-accent-600/20 transition duration-200 hover:bg-accent-400 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-sm font-semibold text-primary-800 ring-1 ring-neutral-200 transition duration-200 hover:bg-neutral-50 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .card {
+    @apply rounded-3xl bg-white shadow-sm ring-1 ring-neutral-200/70;
+  }
+
+  .input {
+    @apply w-full rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 transition focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/15;
+  }
+
+  .chip {
+    @apply whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition duration-200 active:scale-[0.97];
+  }
+
+  .chip-active {
+    @apply bg-primary-800 text-white shadow-sm;
+  }
+
+  .chip-idle {
+    @apply bg-white text-neutral-600 ring-1 ring-neutral-200 hover:bg-neutral-50;
+  }
+}
